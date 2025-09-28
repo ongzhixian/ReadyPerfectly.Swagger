@@ -1,7 +1,11 @@
 name: Publish to Nuget
 
+# Trigger publish to Nuget when we push a tag on main branch
+
 on:
   push:
+    branches: 
+      - "main"
     tags: 
       - "*"
   workflow_dispatch:
